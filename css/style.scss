@@ -1,5 +1,7 @@
 @import"variables";
 @import"reset";
+@import"mixins";
+@import"menu";
 
 a {
     text-decoration: none;
@@ -43,6 +45,7 @@ a:hover {
 div#container{
     display: flex;
     flex-direction: column;
+    margin: $general-margin;
 }
 
 div#content{
@@ -52,11 +55,13 @@ div#content{
     flex-direction: row;
     flex-wrap: wrap;
     width: 80vw;
+    margin: $general-margin;
     }
 }
 
 div#content aside {
     width: 20vw;
+    padding: $general-padding;
 }
 
 article {
@@ -69,26 +74,15 @@ div {
         width: 100%;
         object-fit: cover;
         object-position: center;
+        }
+    h3,p{
+        margin: $general-margin;
+        }
     }
 }
-}
-
-article h3{
-    margin: var(--general-margin);
-}
-
-article p{
-    margin: var(--general-margin);
-    line-height: 1.5;
-}
-
-
 
 header {
-    display: inherit;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
+    @include flex-container;
 }
 
 header h1 {
@@ -124,15 +118,11 @@ aside {
 }
 
 footer {
-    background-color: var(--dark-background-color);
-    display: inherit;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-}
-
-footer p{
-    color: var(--light-foreground-color);
+    @include flex-container;
+    background-color: $dark-background-color;
+    p{
+        color: $light-foreground-color;
+    }
 }
 
 @media only screen and (max-width:1200px) {

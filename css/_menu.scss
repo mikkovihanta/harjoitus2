@@ -1,0 +1,15 @@
+nav {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $darl-foreground-color;
+    border-bottom: 1px solid $darl-foreground-color;
+    height: 40px;
+    ul{
+        padding-left: calc(var(--general-padding)/2);
+        li {
+            display: inline-block;
+            width: 5em;
+            margin-right: $general-margin;
+         }
+    }
+}

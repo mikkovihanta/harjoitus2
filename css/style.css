@@ -9,6 +9,22 @@
   box-sizing: border-box;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  height: 40px;
+}
+nav ul {
+  padding-left: calc(var(--general-padding) / 2);
+}
+nav ul li {
+  display: inline-block;
+  width: 5em;
+  margin-right: 1em;
+}
+
 a {
   text-decoration: none;
 }
@@ -51,6 +67,7 @@ a:hover {
 div#container {
   display: flex;
   flex-direction: column;
+  margin: 1em;
 }
 
 div#content {
@@ -61,10 +78,12 @@ div#content section {
   flex-direction: row;
   flex-wrap: wrap;
   width: 80vw;
+  margin: 1em;
 }
 
 div#content aside {
   width: 20vw;
+  padding: 2em;
 }
 
 article {
@@ -82,18 +101,12 @@ article div img {
   -o-object-position: center;
      object-position: center;
 }
-
-article h3 {
-  margin: var(--general-margin);
-}
-
-article p {
-  margin: var(--general-margin);
-  line-height: 1.5;
+article div h3, article div p {
+  margin: 1em;
 }
 
 header {
-  display: inherit;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 150px;
@@ -132,15 +145,14 @@ aside {
 }
 
 footer {
-  background-color: var(--dark-background-color);
-  display: inherit;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 150px;
+  background-color: #333;
 }
-
 footer p {
-  color: var(--light-foreground-color);
+  color: #fff;
 }
 
 @media only screen and (max-width: 1200px) {
